@@ -13,7 +13,16 @@ public class DesvioComposto {
 		doacao = leitor.nextDouble();
 	
 		/*Aqui devemos criar uma solução para realizar os cálculos adequados baseando-nos no valor da doação*/
-		
+		if (doacao<1000) {
+			//Aqui fica a parte VERDADEIRA do "if" se a doação for menor que 1000
+			investimento = doacao*0.05;
+			usoImediato = doacao - investimento;
+			
+		}else {
+			//Aqui fica a parte FALSA do teste, se a doação for maior ou igual a 1000
+			investimento = doacao*0.15;
+			usoImediato = doacao - investimento;
+		}
 		
 		System.out.println("A doação de R$" + doacao + " implica em um investimento de R$" + investimento + ", restando R$" + usoImediato + " para uso imediato");
 		leitor.close();

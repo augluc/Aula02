@@ -13,6 +13,19 @@ public class DesvioEncadeado {
 		idade = leitor.nextInt();
 	
 		/*Aqui devemos criar uma solução para realizar as verificações.*/
+		if (idade<16) {
+			//Aqui ocorre se a idade for menor do que 16
+			System.out.println("Você não pode votar e nem embarcar");
+		}else {
+			//Aqui é a parte falsa do primeiro if
+			if(idade>18) {
+				//Aqui temos a parte verdadeira do segundo if, portanto o que ocrre se tiver mais que 18 anos
+				System.out.println("Você é obrigado a votar");
+			}else {
+				//Aqui temos a parte falsa do segundo if, portanto se o usuário Não tiver menos que 16 anos, NÃO tiver mais que 18
+				System.out.println("Voce pode optar por votar e embarcar");
+			}
+		}
 		
 		
 	
